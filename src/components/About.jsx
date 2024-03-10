@@ -4,7 +4,7 @@ import './styles/about.css';
 const About = () => {
   return (
     <div className="container mx-auto my-5 p-8 bg-gray-100 rounded-lg shadow-md">
-      <h2 className="text-4xl font-bold mb-4">About Us</h2>
+      <h2 className="text-4xl text-center font-bold mb-4">About Us</h2>
         <p className="text-lg leading-relaxed mb-4">
           Welcome to our Crime Prediction App! We are a dedicated team of
           developers and researchers committed to creating a safer environment
