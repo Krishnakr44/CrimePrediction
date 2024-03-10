@@ -2,8 +2,8 @@ import React, { Fragment, useState } from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
-const karnatakaCities = [
-  { id: 0, name: 'City' },
+const karnatakaDistricts = [
+  { id: 0, name: 'District' },
   { id: 1, name: 'Bagalkot / ಬಾಗಲಕೋಟೆ' },
   { id: 2, name: 'Ballari / ಬಳ್ಳಾರಿ' },
   { id: 3, name: 'Belagavi / ಬೆಳಗಾವಿ' },
@@ -39,24 +39,21 @@ function classNames(...classes) {
   return classes.filter(Boolean).join(' ');
 }
 
-const Cities = () => {
-  const [selected, setSelected] = useState(karnatakaCities[0]);
+const Districts = () => {
+  const [selected, setSelected] = useState(karnatakaDistricts[0]);
   const [searchTerm, setSearchTerm] = useState('');
 
-  // Filter cities based on search term
-  const filteredCities = karnatakaCities.filter(city =>
-    city.name.toLowerCase().includes(searchTerm.toLowerCase())
+  const filteredDistricts = karnatakaDistricts.filter(district =>
+    district.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
   return (
-    <div className="w-100">    
+    <div className="w-100">
       <Listbox value={selected} onChange={setSelected}>
-        
         {({ open }) => (
           <>
-          
-            <Listbox.Label className="block text-2xl text-center font-medium leading-6 text-gray-900">Select City</Listbox.Label>
+            <Listbox.Label className="block text-2xl text-center font-medium leading-6 text-gray-900">Select District</Listbox.Label>
             <div className="relative mt-2">
-              
               <Listbox.Button className="relative w-full cursor-default rounded-md bg-white py-1.5 pl-3 pr-10 text-left text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 sm:text-sm sm:leading-6">
                 <span className="flex items-center">
                   <span className="ml-3 block truncate">{selected.name}</span>
@@ -67,7 +64,6 @@ const Cities = () => {
               </Listbox.Button>
 
               <Transition
-              
                 show={open}
                 as={Fragment}
                 leave="transition ease-in duration-100"
@@ -75,21 +71,19 @@ const Cities = () => {
                 leaveTo="opacity-0"
               >
                 <Listbox.Options className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm">
-                
-       {filteredCities.map((city) => (
+                  {filteredDistricts.map((district) => (
                     <Listbox.Option
-                      key={city.id}
+                      key={district.id}
                       className={({ active }) => classNames(active ? 'bg-indigo-600 text-white' : 'text-gray-900', 'relative cursor-default select-none py-2 pl-3 pr-9')}
-                      value={city}
+                      value={district}
                     >
                       {({ selected, active }) => (
                         <>
                           <div className="flex items-center">
                             <span className={classNames(selected ? 'font-semibold' : 'font-normal', 'ml-3 block truncate')}>
-                              {city.name}
+                              {district.name}
                             </span>
                           </div>
-
                           {selected ? (
                             <span className={classNames(active ? 'text-white' : 'text-indigo-600', 'absolute inset-y-0 right-0 flex items-center pr-4')}>
                               <CheckIcon className="h-5 w-5" aria-hidden="true" />
@@ -108,4 +102,5 @@ const Cities = () => {
     </div>
   );
 };
-export default Cities;
+
+export default Districts;
