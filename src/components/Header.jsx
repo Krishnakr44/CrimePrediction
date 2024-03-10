@@ -30,7 +30,6 @@ function classNames(...classes) {
 const Header = () => {
  
   return (
-   
     <>
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-gray-800">
