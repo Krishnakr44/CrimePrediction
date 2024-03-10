@@ -14,7 +14,7 @@ const navigation = [
   { name: 'Dashboard', href: '/' },
   { name: 'Team', href: '#' },
   { name: 'About us', href: '/about' },
-  { name: 'Contact us', href: '#' },
+  { name: 'Contact us', href: '/contact' },
   { name: 'Reports', href: '#' },
 ];
 const userNavigation = [
