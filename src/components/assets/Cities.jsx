@@ -3,7 +3,7 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 
 const karnatakaCities = [
-  { id: 0, name: 'District' },
+  { id: 0, name: 'City' },
   { id: 1, name: 'Bagalkot / ಬಾಗಲಕೋಟೆ' },
   { id: 2, name: 'Ballari / ಬಳ್ಳಾರಿ' },
   { id: 3, name: 'Belagavi / ಬೆಳಗಾವಿ' },
