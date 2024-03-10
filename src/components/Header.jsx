@@ -11,11 +11,11 @@ const user = {
   imageUrl:profile,
 };
 const navigation = [
-  { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'About us', href: '/about', current: false },
-  { name: 'Contact us', href: '#', current: false },
-  { name: 'Reports', href: '#', current: false },
+  { name: 'Dashboard', href: '/' },
+  { name: 'Team', href: '#' },
+  { name: 'About us', href: '/about' },
+  { name: 'Contact us', href: '#' },
+  { name: 'Reports', href: '#' },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
