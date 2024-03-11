@@ -12,10 +12,10 @@ const user = {
 };
 const navigation = [
   { name: 'Dashboard', href: '/' },
-  { name: 'Team', href: '#' },
+  { name: 'Team', href: '/team' },
   { name: 'About us', href: '/about' },
   { name: 'Contact us', href: '/contact' },
-  { name: 'Reports', href: '#' },
+  { name: 'Reports', href: '/reports' },
 ];
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
